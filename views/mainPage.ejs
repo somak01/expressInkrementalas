@@ -1,0 +1,16 @@
+<%- include("./partials/_htmlhead") -%>
+    <script src="js/logout.js" type="module"></script>
+    <script src="/js/increase.js" type="module"></script>
+    <script src="/js/reset.js" type="module"></script>
+</head>
+<body>
+    <div class="mt-5" style="max-width: 480px;margin:auto;">
+        <div class="center-text">
+            <h1>Hello and Welcome</h1>
+            <h3 id="mainAttraction" style="margin:auto; justify-content: center;"><%=num%></h3>
+            <button id="increase">Increase</button>
+            <button id="reset">Reset</button>
+            <button id="logout">Logout</button>
+        </div>
+    </div>
+<%- include("./partials/_htmlfoot") -%>
