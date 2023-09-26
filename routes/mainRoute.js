@@ -19,20 +19,21 @@ mainRouter.get("/", (req, res) => {
     }
 });
 
-mainRouter.post("/reset", (req, res, next) => {
+mainRouter.get("/reset", (req, res, next) => {
     if (!req.session.user) {
         console.log("nem kene hogy mukodjon a gomb!");
         //res.redirect("/login");
-        next();
+        //next();
+        res.redirect("/login");
     }
     req.session.number = 1;
     res.json({num:req.session.number});
 });
 
-mainRouter.post("/increase", (req, res, next) => {
+mainRouter.get("/increase", (req, res, next) => {
     if (!req.session.user) {
         console.log("nem kene hogy mukodjon a gomb!");
-        res.send("/login")
+        res.redirect("/login")
     }
     req.session.number++;
     res.json({num:req.session.number});

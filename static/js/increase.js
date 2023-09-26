@@ -4,13 +4,14 @@ const increaseBut = document.querySelector("#increase");
 
 
 increaseBut.addEventListener("click", async () => {
-    const response = await axios.post("/main/increase").catch(function (error){
+    const response = await axios.get("/main/increase").catch(function (error){
         if (error.response) {
+            window.location.href = "/login";
             console.log(error.response.data);
+            
         }
     });
     const data = await response.data;
-    response.s
     console.log(response);
     document.querySelector("h3").textContent = data.num;
 })

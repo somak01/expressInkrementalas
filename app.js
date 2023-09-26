@@ -12,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url)) + sep;
 
 
 const cfg = {
-    port:3001,
+    port:3002,
     dir: {
         root: __dirname,
         routes: __dirname + "routes" + sep,
